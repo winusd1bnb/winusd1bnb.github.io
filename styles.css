@@ -45,14 +45,14 @@ h1 {
 }
 
 .buy-button {
-    display: block;
+    display: inline-block; /* Changed to inline-block for compact sizing */
     background-color: #28a745; /* Green color */
     color: #ffffff;
-    padding: 14px 30px;
+    padding: 8px 20px; /* Reduced padding for shorter button */
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.1rem; /* Smaller font size */
     font-weight: 600;
-    border-radius: 30px;
+    border-radius: 20px; /* Slightly smaller border-radius */
     margin: 0 auto 25px; /* Centered with auto margins */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
@@ -161,8 +161,8 @@ h2 {
     }
 
     .buy-button {
-        font-size: 1.1rem;
-        padding: 12px 25px;
+        font-size: 1rem; /* Smaller font for smaller screens */
+        padding: 7px 18px; /* Adjusted padding */
     }
 
     .content p, .content ul li {
@@ -184,8 +184,8 @@ h2 {
     }
 
     .buy-button {
-        font-size: 1rem;
-        padding: 10px 20px;
+        font-size: 0.9rem; /* Even smaller font */
+        padding: 6px 16px; /* Further reduced padding */
     }
 
     .content p, .content ul li {
