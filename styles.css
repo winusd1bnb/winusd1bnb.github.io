@@ -1,1 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
+body {
+    background-color: #0a1a2f; /* Dark background to match the image */
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 30px;
+}
+
+.eagle-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #ffd700; /* Gold color for the heading */
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin: 20px 0;
+    color: #ffd700;
+}
+
+.content {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.content ul li {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.content ul li strong {
+    color: #ffd700;
+}
+
+.content ul li:before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #ffd700;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .eagle-image {
+        max-width: 300px;
+    }
+
+    .content p, .content ul li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .eagle-image {
+        max-width: 250px;
+    }
+
+    .content p, .content ul li {
+        font-size: 0.9rem;
+    }
+}
