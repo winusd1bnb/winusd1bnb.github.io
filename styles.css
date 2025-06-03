@@ -6,9 +6,51 @@
 }
 
 body {
-    background-color: #0a1a2f; /* Dark background to match the image */
+    background-color: #0a1a2f; /* Dark background */
     color: #ffffff;
     line-height: 1.6;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #1c2b4a; /* Slightly lighter than body for contrast */
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffd700; /* Gold color for logo */
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ffd700; /* Gold on hover */
 }
 
 .container {
@@ -19,7 +61,7 @@ body {
 }
 
 .header {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .eagle-image {
@@ -32,7 +74,7 @@ body {
 
 .buy-button {
     display: inline-block;
-    background-color: #28a745; /* Green color for the button */
+    background-color: #28a745; /* Green color */
     color: #ffffff;
     padding: 12px 24px;
     text-decoration: none;
@@ -53,7 +95,7 @@ body {
 }
 
 .social-link {
-    color: #ffd700; /* Gold color for the X link */
+    color: #ffd700; /* Gold color */
     text-decoration: none;
     font-weight: bold;
 }
@@ -65,7 +107,7 @@ body {
 h1 {
     font-size: 2.5rem;
     margin-bottom: 15px;
-    color: #ffd700; /* Gold color for the heading */
+    color: #ffd700; /* Gold color */
 }
 
 h2 {
@@ -78,6 +120,7 @@ h2 {
     text-align: left;
     max-width: 800px;
     margin: 0 auto 40px;
+    padding: 0 20px; /* Added padding for consistent alignment */
 }
 
 .content p {
@@ -109,10 +152,30 @@ h2 {
     font-size: 1.2rem;
 }
 
+/* Contact Section Specific Styles */
+.contact ul li:before {
+    content: "📩"; /* Different icon for contact section */
+}
+
+.contact ul li:nth-child(2):before {
+    content: "🖼"; /* X icon for social media */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
         padding: 15px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
     }
 
     h1 {
@@ -157,5 +220,13 @@ h2 {
 
     .content p, .content ul li {
         font-size: 0.9rem;
+    }
+
+    .nav-logo {
+        font-size: 1.2rem;
+    }
+
+    .nav-links li a {
+        font-size: 1rem;
     }
 }
