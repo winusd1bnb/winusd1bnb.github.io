@@ -2,130 +2,104 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
 }
 
 body {
-    background-color: #0a1a2f; /* Dark background */
+    background: linear-gradient(135deg, #0a1a2f 0%, #1c2b4a 100%); /* Subtle gradient */
     color: #ffffff;
     line-height: 1.6;
-}
-
-/* Navigation Bar */
-.navbar {
-    background-color: #1c2b4a; /* Slightly lighter than body for contrast */
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.nav-logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #ffd700; /* Gold color for logo */
-    text-decoration: none;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
-}
-
-.nav-links li a:hover {
-    color: #ffd700; /* Gold on hover */
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px 20px;
     text-align: center;
 }
 
 .header {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
+}
+
+h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #ffd700; /* Gold color */
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
 }
 
 .eagle-image {
     width: 100%;
     max-width: 400px;
     height: auto;
-    margin-bottom: 20px;
-    border-radius: 10px;
+    margin: 0 auto 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    transition: transform 0.3s ease;
+}
+
+.eagle-image:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
 }
 
 .buy-button {
-    display: inline-block;
+    display: block;
     background-color: #28a745; /* Green color */
     color: #ffffff;
-    padding: 12px 24px;
+    padding: 14px 30px;
     text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 25px;
-    margin-bottom: 20px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-radius: 30px;
+    margin: 0 auto 25px; /* Centered with auto margins */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .buy-button:hover {
-    background-color: #218838; /* Darker green on hover */
-    transform: scale(1.05);
+    background-color: #218838; /* Darker green */
+    transform: translateY(-2px); /* Lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .buy-button:active {
-    transform: scale(0.95);
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .social-link {
     color: #ffd700; /* Gold color */
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
 .social-link:hover {
+    color: #ffeb3b; /* Lighter gold on hover */
     text-decoration: underline;
 }
 
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    color: #ffd700; /* Gold color */
-}
-
 h2 {
-    font-size: 1.8rem;
-    margin: 20px 0;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 30px 0 20px;
     color: #ffd700;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .content {
     text-align: left;
     max-width: 800px;
-    margin: 0 auto 40px;
-    padding: 0 20px; /* Added padding for consistent alignment */
+    margin: 0 auto 60px;
+    padding: 0 20px; /* Consistent padding */
 }
 
 .content p {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     margin-bottom: 15px;
+    font-weight: 400;
 }
 
 .content ul {
@@ -134,7 +108,7 @@ h2 {
 }
 
 .content ul li {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     margin-bottom: 20px;
     padding-left: 30px;
     position: relative;
@@ -142,6 +116,7 @@ h2 {
 
 .content ul li strong {
     color: #ffd700;
+    font-weight: 600;
 }
 
 .content ul li:before {
@@ -152,38 +127,33 @@ h2 {
     font-size: 1.2rem;
 }
 
-/* Contact Section Specific Styles */
+/* Contact Section */
+.contact {
+    background-color: rgba(28, 43, 74, 0.5); /* Subtle background */
+    padding: 30px 20px;
+    border-radius: 10px;
+}
+
 .contact ul li:before {
-    content: "📩"; /* Different icon for contact section */
+    content: "📩"; /* Email icon */
 }
 
 .contact ul li:nth-child(2):before {
-    content: "🖼"; /* X icon for social media */
+    content: "🖼"; /* X icon */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
-        padding: 15px;
-    }
-
-    .nav-container {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
+        padding: 30px 15px;
     }
 
     h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 
     .eagle-image {
@@ -191,8 +161,8 @@ h2 {
     }
 
     .buy-button {
-        font-size: 1rem;
-        padding: 10px 20px;
+        font-size: 1.1rem;
+        padding: 12px 25px;
     }
 
     .content p, .content ul li {
@@ -202,11 +172,11 @@ h2 {
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 
     h2 {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
 
     .eagle-image {
@@ -214,19 +184,11 @@ h2 {
     }
 
     .buy-button {
-        font-size: 0.9rem;
-        padding: 8px 16px;
+        font-size: 1rem;
+        padding: 10px 20px;
     }
 
     .content p, .content ul li {
         font-size: 0.9rem;
-    }
-
-    .nav-logo {
-        font-size: 1.2rem;
-    }
-
-    .nav-links li a {
-        font-size: 1rem;
     }
 }
