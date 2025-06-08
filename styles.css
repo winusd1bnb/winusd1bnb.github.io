@@ -2,193 +2,209 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background: linear-gradient(135deg, #0a1a2f 0%, #1c2b4a 100%); /* Subtle gradient */
-    color: #ffffff;
+    background-color: #f0f2f5;
+    color: #333;
     line-height: 1.6;
 }
 
-.container {
+/* Header and Navigation */
+header {
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 20px;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
 }
 
-.header {
-    margin-bottom: 60px;
+.logo-img {
+    height: 50px;
 }
 
-h1 {
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: #ffd700; /* Gold color */
-    margin-bottom: 20px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
 }
 
-.eagle-image {
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #ffd700;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    background: white;
+    height: 3px;
+    width: 25px;
+    margin: 2px 0;
+    transition: all 0.3s;
+}
+
+.banner-img {
     width: 100%;
-    max-width: 400px;
     height: auto;
-    margin: 0 auto 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-    transition: transform 0.3s ease;
+    max-height: 300px;
+    object-fit: cover;
 }
 
-.eagle-image:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
-}
-
-.buy-button {
-    display: inline-block; /* Changed to inline-block for compact sizing */
-    background-color: #28a745; /* Green color */
-    color: #ffffff;
-    padding: 8px 20px; /* Reduced padding for shorter button */
-    text-decoration: none;
-    font-size: 1.1rem; /* Smaller font size */
-    font-weight: 600;
-    border-radius: 20px; /* Slightly smaller border-radius */
-    margin: 0 auto 25px; /* Centered with auto margins */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-}
-
-.buy-button:hover {
-    background-color: #218838; /* Darker green */
-    transform: translateY(-2px); /* Lift effect */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-.buy-button:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-.social-link {
-    color: #ffd700; /* Gold color */
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-.social-link:hover {
-    color: #ffeb3b; /* Lighter gold on hover */
-    text-decoration: underline;
+/* Sections */
+.section {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 h2 {
     font-size: 2rem;
-    font-weight: 600;
-    margin: 30px 0 20px;
-    color: #ffd700;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+    color: #1e3a8a;
 }
 
-.content {
-    text-align: left;
-    max-width: 800px;
-    margin: 0 auto 60px;
-    padding: 0 20px; /* Consistent padding */
+p, ul {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
 }
 
-.content p {
-    font-size: 1.15rem;
-    margin-bottom: 15px;
-    font-weight: 400;
-}
-
-.content ul {
+ul {
     list-style: none;
-    padding-left: 0;
 }
 
-.content ul li {
-    font-size: 1.15rem;
-    margin-bottom: 20px;
-    padding-left: 30px;
-    position: relative;
+ul li {
+    margin-bottom: 0.5rem;
 }
 
-.content ul li strong {
-    color: #ffd700;
+ul li a {
+    color: #3b82f6;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+.buy-btn, .social-btn, .copy-btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
     font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
 }
 
-.content ul li:before {
-    content: "✔";
-    position: absolute;
-    left: 0;
-    color: #ffd700;
-    font-size: 1.2rem;
+.buy-btn {
+    background: #ffd700;
+    color: #1e3a8a;
 }
 
-/* Contact Section */
-.contact {
-    background-color: rgba(28, 43, 74, 0.5); /* Subtle background */
-    padding: 30px 20px;
-    border-radius: 10px;
+.buy-btn:hover {
+    background: #e6c200;
+    transform: translateY(-2px);
 }
 
-.contact ul li:before {
-    content: "📩"; /* Email icon */
+.copy-btn {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 
-.contact ul li:nth-child(2):before {
-    content: "🖼"; /* X icon */
+.copy-btn:hover {
+    background: #1e3a8a;
+    transform: translateY(-2px);
+}
+
+.social-btn {
+    margin: 0.5rem;
+}
+
+.x-btn {
+    background: #000;
+    color: white;
+}
+
+.x-btn:hover {
+    background: #333;
+    transform: translateY(-2px);
+}
+
+.telegram-btn {
+    background: #0088cc;
+    color: white;
+}
+
+.telegram-btn:hover {
+    background: #006699;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .container {
-        padding: 30px 15px;
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #1e3a8a;
+        padding: 1rem 0;
     }
 
-    h1 {
-        font-size: 2rem;
+    .nav-links.active {
+        display: flex;
     }
 
-    h2 {
-        font-size: 1.6rem;
+    .hamburger {
+        display: flex;
     }
 
-    .eagle-image {
-        max-width: 300px;
-    }
-
-    .buy-button {
-        font-size: 1rem; /* Smaller font for smaller screens */
-        padding: 7px 18px; /* Adjusted padding */
-    }
-
-    .content p, .content ul li {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.6rem;
+    .section {
+        margin: 1.5rem;
+        padding: 1.5rem;
     }
 
     h2 {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
 
-    .eagle-image {
-        max-width: 250px;
-    }
-
-    .buy-button {
-        font-size: 0.9rem; /* Even smaller font */
-        padding: 6px 16px; /* Further reduced padding */
-    }
-
-    .content p, .content ul li {
-        font-size: 0.9rem;
+    .banner-img {
+        max-height: 200px;
     }
 }
