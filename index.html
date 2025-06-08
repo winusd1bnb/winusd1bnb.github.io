@@ -3,51 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WIN ($WIN) - The Meme That’s Built to WIN</title>
+    <title>WIN/USD1 - Meme Coin</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <h1>🦅 WIN ($WIN) — The Meme That’s Built to WIN</h1>
-            <img src="logo.png" alt="Eagle with Trophy" class="eagle-image">
-            <a href="https://pancakeswap.finance/swap?chain=BSC&outputCurrency=0x8d0d000ee44948fc98c9b98a4fa4921476f08b0d&inputCurrency=0x5405899ca33af25a3547dbee3b0a97818afd4444" class="buy-button">BUY $WIN</a>
-        </header>
-
-        <section class="intro content" id="about">
-            <h2>About $WIN</h2>
-            <p><strong>✨ The Flight Begins:</strong> June 4, 2025 · 8:01 AM UTC (WLFI requirement)</p>
-            <p>WIN ($WIN) is a community-powered meme coin with one mission:<br>
-            💥 To win the USD1 x BNB Chain Liquidity Drive.</p>
-            <p>Created exclusively for the $1M campaign hosted by WLFI, Four.meme, and PancakeSwap, $WIN blends meme energy, stablecoin pairing, and liquidity power to soar above the competition.</p>
-        </section>
-
-        <section class="features content">
-            <h2>🚀 Why $WIN?</h2>
-            <p>Each feature below is strategically designed to meet the official WLFI campaign criteria:</p>
-            <ul>
-                <li><strong>🔗 Paired with USD1 (WLFI requirement)</strong><br>
-                Ensures price stability, deep liquidity, and eligibility for the Liquidity Drive.</li>
-                <li><strong>🌊 Launching on Four.meme (WLFI requirement)</strong><br>
-                Built on the official meme coin launch platform for maximum exposure.</li>
-                <li><strong>💸 Liquidity on PancakeSwap V3 (WLFI requirement)</strong><br>
-                Our pair — $WIN / USD1 — will launch with a 0.01% fee tier, meeting the precise technical specs of the campaign.</li>
-                <li><strong>🏆 Competing for $1M in WLFI Rewards + Ecosystem Support</strong><br>
-                Eligible for up to $800K in token purchases and $200K in USD1 liquidity incentives.</li>
-                <li><strong>🎯 Campaign-Aligned Strategy</strong><br>
-                $WIN is fully focused on driving trading volume, increasing TVL, and building a meme-powered community — exactly what the campaign rewards.</li>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="WIN/USD1 Logo" class="logo-img">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#buy">Buy</a></li>
+                <li><a href="#tokenomics">Tokenomics</a></li>
+                <li><a href="#social">Social</a></li>
             </ul>
-        </section>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <div class="banner">
+            <img src="banner.png" alt="WIN/USD1 Banner" class="banner-img">
+        </div>
+    </header>
 
-        <section class="contact content" id="contact">
-            <h2>Contact Us</h2>
-            <p>Join our community or reach out for more information!</p>
-            <ul>
-                <li><strong>X:</strong> <a href="https://x.com/winusd1bnb" target="_blank" class="social-link">Follow us @winusd1bnb</a></li>
-            </ul>
-            <a href="https://x.com/winusd1bnb" target="_blank" class="buy-button">Join Our Community</a>
-        </section>
-    </div>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>About WIN/USD1</h2>
+        <p>WIN/USD1 is a $USD1 adoption meme coin designed to bring fun and value to the crypto community.</p>
+        <p><strong>Contract Address:</strong> <span id="ca">0x5405899ca33af25a3547dbee3b0a97818afd4444</span></p>
+        <button onclick="copyCA()" class="copy-btn">Copy CA</button>
+    </section>
+
+    <!-- Buy Section -->
+    <section id="buy" class="section">
+        <h2>Buy WIN/USD1</h2>
+        <p>Get your WIN/USD1 tokens now on PancakeSwap!</p>
+        <a href="https://pancakeswap.finance/swap?chain=BSC&outputCurrency=0x8d0d000ee44948fc98c9b98a4fa4921476f08b0d&inputCurrency=0x5405899ca33af25a3547dbee3b0a97818afd4444" target="_blank" class="buy-btn">BUY WIN From PancakeSwap</a>
+    </section>
+
+    <!-- Tokenomics Section -->
+    <section id="tokenomics" class="section">
+        <h2>Tokenomics</h2>
+        <ul>
+            <li>Launched from <a href="https://four.meme" target="_blank">four.meme</a></li>
+            <li>Liquidity Pool (LP) Burnt</li>
+        </ul>
+    </section>
+
+    <!-- Social Section -->
+    <section id="social" class="section">
+        <h2>Join Our Community</h2>
+        <div class="social-links">
+            <a href="https://x.com/winusd1bnb" target="_blank" class="social-btn x-btn">Follow us on X</a>
+            <a href="https://t.me/winusd1bnb" target="_blank" class="social-btn telegram-btn">Join our Telegram</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 WIN/USD1. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
